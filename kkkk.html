@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript">
+var eb3_queryParams1 = ['8778_1058_qua_sn_2', 'kiroros7', 'kiroros2_2', 'kiroros_oni', '8778_1058_qua_sn_2_cyoku', 'kiroros7_cyoku', 'kiroros2_2_cyoku'];
+var eb3_queryParam2 = ['8778_1058_qua', '8778_1058_qua_cyoku'];
+var eb3_queryParams = new URLSearchParams(location.search);
+var eb3_Value = eb3_queryParams.get('p');
+window.eb_test_33 = eb3_queryParams.get('p');
+if (eb3_queryParams1.includes(eb3_Value)) {
+  window.eb_app_id_email = "dummy_app_id_email_1";
+	window.eb_app_id_sms = "dummy_app_id_sms_1";
+	console.log("eb_app_id email:%s sms:%s",window.eb_app_id_email, window.eb_app_id_sms)
+} else if (eb3_queryParam2.includes(eb3_Value)) {
+ window.eb_app_id_email = "dummy_app_id_email_2";
+ window.eb_app_id_sms = "dummy_app_id_sms_2";
+ console.log("eb_app_id email:%s sms:%s",window.eb_app_id_email, window.eb_app_id_sms)
+} else {
+	console.error("eb_settings_2 app id を特定できません")
+}
+window.ebSettings = {
+eb_appId: window.eb_app_id_email,
+eb_email: 'input[type="email"]'
+};
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.6/2/doing.js"></script>
+<script type="text/javascript">
+window.ebSettings_2 = {
+eb_appId: window.eb_app_id_sms,
+eb_tel: 'input[placeholder="09011112222"]'
+};
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/2/doing.js"></script>
+</head>
+<body>
+
+<label for="email">email (4 to 8 characters):</label>
+
+<input type="email" id="email" name="email" required
+       minlength="4" maxlength="8" size="10">
+
+       <label for="tel">tel </label>
+
+       <input type="text" id="tel" name="tel" placeholder="09011112222" required
+              minlength="0" maxlength="12" size="10">
+
+</body>
+</html>
