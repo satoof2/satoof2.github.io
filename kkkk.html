@@ -17,19 +17,19 @@ if (eb3_queryParams1.includes(eb3_Value)) {
 } else {
 	console.error("eb_settings_2 app id を特定できません")
 }
-window.ebSettings = {
-eb_appId: window.eb_app_id_email,
-eb_email: 'input[type="email"]'
-};
+window.ebSettings_2 = [
+  {
+    eb_appId: window.eb_app_id_email,
+    eb_email: 'input[type="email"]'
+  },
+  {
+    eb_appId: window.eb_app_id_sms,
+    eb_tel: 'input[placeholder="09011112222"]'
+  }
+]
 </script>
 <script src="https://cdn.engage-bot.asia/sdk/web-form/v2.6/2/doing.js"></script>
-<script type="text/javascript">
-window.ebSettings_2 = {
-eb_appId: window.eb_app_id_sms,
-eb_tel: 'input[placeholder="09011112222"]'
-};
-</script>
-<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/2/doing.js"></script>
+
 </head>
 <body>
 
