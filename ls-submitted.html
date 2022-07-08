@@ -1,0 +1,22 @@
+
+<script type="text/javascript">
+// submitted.js実行時にローカルストレージから削除されるので保存する
+window.eb_webId_2 = localStorage.getItem('eb_webId') || ""
+window.ebSettings = {"eb_appId": "aaaaa"}
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/submitted.js"></script>
+<script type="text/javascript">
+localStorage.setItem('eb_webId', window.eb_webId_2);
+window.ebSettings = {"eb_appId": "bbbbb"}
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/submitted.js"></script>
+<script type="text/javascript">
+localStorage.setItem('eb_webId', window.eb_webId_2);
+window.ebSettings = {"eb_appId": "ccccc"}
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/submitted.js"></script>
+<script type="text/javascript">
+localStorage.setItem('eb_webId', window.eb_webId_2);
+window.ebSettings = {"eb_appId": "ddddd"}
+</script>
+<script src="https://cdn.engage-bot.asia/sdk/web-form/v2.3-ls/submitted.js"></script>
