@@ -1,17 +1,51 @@
 <html>
 <head>
   <script type="text/javascript">
-          window.ebSettings_2 = [{
-            eb_appId: 'aaaaaa',
-           },{
-            eb_appId: 'bbbbbb',
-           },{
-            eb_appId: 'cccccc',
-           },{
-            eb_appId: 'dddddd',
-          }];
+          (function () {
+    var url =
+        'https://dvigvlgec2.execute-api.ap-northeast-1.amazonaws.com/prod/submitted';
+    var appId = window.ebSettings_2.eb_appId;
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'x-api-key': 'a3nbuFubdpxBHaIbxO8O2vzxyr9uCqN9yrEAnr90',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            appId: "08cfa78f549041d6a411b851c34c8853",
+            webId:"d81bac7b725b4b1abeae2b0cc7a54c8e",
+        }),
+    })
+        .then(function (data) {
+            deleteCookieValue('eb_webId_2');
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+
+    function getCookieValue(name) {
+        var st = '';
+        var ed = '';
+        if (document.cookie.length > 0) {
+            st = document.cookie.indexOf(name + '=');
+            if (st != -1) {
+                st = st + name.length + 1;
+                ed = document.cookie.indexOf(';', st);
+                if (ed == -1) ed = document.cookie.length;
+                return decodeURIComponent(document.cookie.substring(st, ed));
+            }
+        }
+        return '';
+    }
+    // 驕狗畑荳翫�蝠城｡後′縺ゅｋ縺ｮ縺ｧpath繧呈欠螳壹＠縺ｦ蜍穂ｽ懊ｒ縺輔○繧九％縺ｨ縺ｯ縺励↑縺�〒縺上□縺輔＞
+    // > https://github.com/cbot-dev/cbot-sdk-javascript/issues/49
+    function deleteCookieValue(name) {
+        var dt = new Date('1999-12-31T23:59:59Z');
+        document.cookie = name + '=; expires=' + dt.toUTCString();
+    }
+})();
   </script>
-  <script src="https://cdn.engage-bot.asia/sdk/web-form/v2.7/2/submitted.js"></script>
+
 </head>
 <body>
 
