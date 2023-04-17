@@ -10,6 +10,13 @@
   setTimeout(function() {
     history.pushState({"aa":2}, null, null); // pushStateを実行
   }, 2000); // 2秒間待機
+  // 強制リロード
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+    // bfcache発動時の処理
+    window.location.reload();
+  }
+});
 </script>
-  v4
+  v5
 </html>
