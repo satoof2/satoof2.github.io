@@ -6,9 +6,9 @@
   alert("a");
   
 })
-  history.pushState(null, null, null)
+  history.pushState({"aa":1}, null, null)
   setTimeout(function() {
-    history.pushState(null, null, null); // pushStateを実行
+    history.pushState({"aa":2}, null, null); // pushStateを実行
   }, 2000); // 2秒間待機
 </script>
   v3
